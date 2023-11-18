@@ -1,0 +1,8 @@
+#+title: org-mode-latex-templates
+#+author: Atri Hegde
+#+date: <2023-11-18 Sat>
+
+Here are some the SETUPFILEs I use when I am writing documents that I will import into a $\LaTeX$.
+
+* Other resources
+- [[https:olmon.gitlab.io/org-themes][Org HTML Themes Collection]]
