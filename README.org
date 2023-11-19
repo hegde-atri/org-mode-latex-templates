@@ -69,7 +69,7 @@ We are using =fancyhdr= package to achieve this.
 To get column lines add this to the line above your table.
 
 #+begin_quote
-=c|c|c|c= is for a table with for columns, and each aligned to the center.
+=c|c|c|c= is for a table with four columns, and each aligned to the center.
 You can change =c= to =l= or =r= to change this.
 Adjust accordingly depending on how many columns you have.
 #+end_quote
