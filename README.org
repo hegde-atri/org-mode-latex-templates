@@ -1,8 +1,83 @@
 #+title: org-mode-latex-templates
 #+author: Atri Hegde
-#+date: <2023-11-18 Sat>
+
+* Preface
 
 Here are some the SETUPFILEs I use when I am writing documents that I will import into a $\LaTeX$.
+
+#+begin_quote
+If you are using these templates for real work, check out the sections under [[#reportorg][Report.org]] for more detail on writing in org-mode and exporting to latex.
+#+end_quote
+
+* Table of Contents :TOC:
+- [[#preface][Preface]]
+- [[#simpleorg][Simple.org]]
+  - [[#example][Example]]
+- [[#reportorg][Report.org]]
+  - [[#example-file][Example file]]
+  - [[#header-and-footer][Header and Footer]]
+  - [[#tables][Tables]]
+- [[#other-resources][Other resources]]
+
+* [[./simple.org][Simple.org]]
+
+** Example
+
+#+begin_src org
+,#+title: Big title
+,#+subtitle: Subtitle
+,#+AUTHOR: Your name
+,#+SETUPFILE: ~/.config/doom/latex-templates/report.org
+
+,#+LATEX_HEADER: \fancyhead[C]{Title here}
+,#+LATEX_HEADER: \fancyfoot[C]{\thepage}
+
+,#+LATEX: \newpage
+
+Start here...
+#+end_src
+
+* [[./report.org][Report.org]]
+
+To use it just add this line as in your org properites.
+Setupfile should point to wherever you're =report.org= is on your disk.
+
+** Example file
+
+#+begin_quote
+A real example file is in the works and coming soon...
+#+end_quote
+
+#+begin_src org
+,#+title: Big title
+,#+subtitle: Subtitle
+,#+AUTHOR: Your name
+,#+SETUPFILE: ~/.config/doom/latex-templates/report.org
+
+,#+LATEX_HEADER: \fancyhead[C]{Title here}
+,#+LATEX_HEADER: \fancyfoot[C]{\thepage}
+
+,#+LATEX: \newpage
+
+Start here...
+#+end_src
+
+** Header and Footer
+We are using =fancyhdr= package to achieve this.
+
+** Tables
+To get column lines add this to the line above your table.
+
+#+begin_quote
+=c|c|c|c= is for a table with for columns, and each aligned to the center.
+You can change =c= to =l= or =r= to change this.
+Adjust accordingly depending on how many columns you have.
+#+end_quote
+
+#+begin_src org
+,#+ATTR_LATEX: :align c|c|c|c
+#+end_src
+
 
 * Other resources
 - [[https:olmon.gitlab.io/org-themes][Org HTML Themes Collection]]

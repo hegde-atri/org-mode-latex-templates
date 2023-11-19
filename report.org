@@ -13,6 +13,7 @@
 #+LATEX_HEADER: \usepackage{subcaption}
 #+LaTeX_HEADER: \newcommand{\point}[1]{\noindent \textbf{#1}}
 
+# % Hyperlinks
 #+LATEX_HEADER: \definecolor{bblue}{HTML}{045ECE}
 #+LaTeX_HEADER: \usepackage{hyperref}
 #+LATEX_HEADER: \hypersetup{colorlinks, linkcolor=bblue, urlcolor=bblue}
