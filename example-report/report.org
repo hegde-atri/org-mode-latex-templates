@@ -1,0 +1,64 @@
+#+TITLE: Report
+#+SUBTITLE: A tour around the features of report.org
+#+AUTHOR: Atri Hegde
+#+DESCRIPTION: Examples for all the features for report setupfile
+#+SETUPFILE: ~/.config/doom/latex-templates/report.org
+#+LATEX_HEADER: \fancyhead[C]{Report - Atri Hegde}
+#+LATEX_HEADER: \fancyfoot[C]{\thepage}
+
+#+LaTeX: \newpage
+
+* Syntax Highlighting
+Here is some =code=.
+
+
+#+begin_src python
+print("Hello")
+#+end_src
+
+#+begin_src haskell
+fun:: Int -> Int
+fun a = a^2
+#+end_src
+
+#+caption: Setup syntax highlighting
+#+begin_src emacs-lisp
+(setq org-latex-listings 'minted
+      org-latex-packages-alist '(("" "minted"))
+      org-latex-pdf-process
+      '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+#+end_src
+
+* Tables
+
+You can have different sort of tables
+
+- You can change the borders
+#+ATTR_LATEX: :align c|c|c|c
+| Function | Input values | Outcome | Justification |
+|----------+--------------+---------+---------------|
+| fn a     |            2 | pass    | boundary test |
+
+#+ATTR_LATEX: :align |c|c|c|c|
+| Function | Input values | Outcome | Justification |
+|----------+--------------+---------+---------------|
+| fn a     |            2 | pass    | boundary test |
+
+- Content alignment
+#+ATTR_LATEX: :align |r|r|r|r|
+| Function | Input values | Outcome | Justification |
+|----------+--------------+---------+---------------|
+| fn a     |            2 | pass    | boundary test |
+
+#+ATTR_LATEX: :align |l|l|l|l|
+| Function | Input values | Outcome | Justification |
+|----------+--------------+---------+---------------|
+| fn a     |            2 | pass    | boundary test |
+
+- With caption
+#+CAPTION: Beautiful table
+#+ATTR_LATEX: :align |c|c|c|c|
+| Function | Input values | Outcome | Justification |
+|----------+--------------+---------+---------------|
+| fn a     |            2 | pass    | boundary test |

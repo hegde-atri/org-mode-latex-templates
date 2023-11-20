@@ -11,15 +11,16 @@ If you are using these templates for real work, check out the sections under [[#
 
 * Table of Contents :TOC:
 - [[#preface][Preface]]
-- [[#simpleorg][Simple.org]]
+- [[#simpleorg][simple.org]]
   - [[#example][Example]]
-- [[#reportorg][Report.org]]
+- [[#reportorg][report.org]]
   - [[#example-file][Example file]]
   - [[#header-and-footer][Header and Footer]]
   - [[#tables][Tables]]
+  - [[#syntax-highlighting][Syntax highlighting]]
 - [[#other-resources][Other resources]]
 
-* [[./simple.org][Simple.org]]
+* [[./simple.org][simple.org]]
 
 ** Example
 
@@ -37,9 +38,9 @@ If you are using these templates for real work, check out the sections under [[#
 Start here...
 #+end_src
 
-* [[./report.org][Report.org]]
+* [[./report.org][report.org]]
 
-To use it just add this line as in your org properites.
+To use it just add the setupfile line.
 Setupfile should point to wherever you're =report.org= is on your disk.
 
 ** Example file
@@ -76,6 +77,22 @@ Adjust accordingly depending on how many columns you have.
 
 #+begin_src org
 ,#+ATTR_LATEX: :align c|c|c|c
+#+end_src
+
+** Syntax highlighting
+
+If you are including code blocks in your document and you want it to be pretty than add this to your emacs config.
+
+#+begin_quote
+If you are using Doom Emacs it will be in your =config.el=
+#+end_quote
+
+#+begin_src emacs-lisp
+(setq org-latex-listings 'minted
+      org-latex-packages-alist '(("" "minted"))
+      org-latex-pdf-process
+      '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 #+end_src
 
 

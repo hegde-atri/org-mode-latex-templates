@@ -1,0 +1,150 @@
+% Created 2023-11-19 Sun 15:30
+% Intended LaTeX compiler: pdflatex
+\documentclass[a4paper,11pt]{article}
+           \usepackage{minted}
+           \usepackage{lmodern}
+\renewcommand*\rmdefault{lmss}
+\usepackage{microtype}
+\usepackage[table]{xcolor}
+\usepackage[margin=0.9in,bmargin=1.0in,tmargin=1.0in]{geometry}
+\usepackage{amsmath}
+\usepackage{arydshln}
+\usepackage{subcaption}
+\newcommand{\point}[1]{\noindent \textbf{#1}}
+\definecolor{bblue}{HTML}{045ECE}
+\usepackage{hyperref}
+\hypersetup{colorlinks, linkcolor=bblue, urlcolor=bblue}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage[mla]{ellipsis}
+\parindent = 0em
+\setlength\parskip{.5\baselineskip}
+\usepackage{adjustbox}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\AtBeginDocument{\maketitle\newpage}
+\fancyhead[C]{Report - Atri Hegde}
+\fancyfoot[C]{\thepage}
+\author{Atri Hegde}
+\date{\today}
+\title{Report\\\medskip
+\large A tour around the features of report.org}
+\hypersetup{
+ pdfauthor={Atri Hegde},
+ pdftitle={Report},
+ pdfkeywords={},
+ pdfsubject={Examples for all the features for report setupfile},
+ pdfcreator={Emacs 29.1 (Org mode 9.7)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\newpage
+\section{Syntax Highlighting}
+\label{sec:org7c66b9a}
+Here is some \texttt{code}.
+
+
+\begin{minted}[]{python}
+print("Hello")
+\end{minted}
+
+\begin{minted}[]{haskell}
+fun:: Int -> Int
+fun a = a^2
+\end{minted}
+
+\begin{listing}[htbp]
+\begin{minted}[]{common-lisp}
+(setq org-latex-listings 'minted
+      org-latex-packages-alist '(("" "minted"))
+      org-latex-pdf-process
+      '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+        "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+\end{minted}
+\caption{Setup syntax highlighting}
+\end{listing}
+\section{Tables}
+\label{sec:org7e39aaa}
+
+You can have different sort of tables
+
+\begin{itemize}
+\item You can change the borders
+\end{itemize}
+\begin{center}
+\begin{tabular}{c|c|c|c}
+Function & Input values & Outcome & Justification\\[0pt]
+\hline
+fn a & 2 & pass & boundary test\\[0pt]
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+Function & Input values & Outcome & Justification\\[0pt]
+\hline
+fn a & 2 & pass & boundary test\\[0pt]
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item Content alignment
+\end{itemize}
+\begin{center}
+\begin{tabular}{|r|r|r|r|}
+Function & Input values & Outcome & Justification\\[0pt]
+\hline
+fn a & 2 & pass & boundary test\\[0pt]
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+Function & Input values & Outcome & Justification\\[0pt]
+\hline
+fn a & 2 & pass & boundary test\\[0pt]
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item With caption
+\end{itemize}
+\begin{table}[htbp]
+\caption{Beautiful table}
+\centering
+\begin{tabular}{|c|c|c|c|}
+Function & Input values & Outcome & Justification\\[0pt]
+\hline
+fn a & 2 & pass & boundary test\\[0pt]
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+\item Long table
+\end{itemize}
+
+\begin{longtable}{lrll}
+\caption{Beautiful table}
+\\[0pt]
+Function & Input values & Outcome & Justification\\[0pt]
+\hline
+\endfirsthead
+\multicolumn{4}{l}{Continued from previous page} \\[0pt]
+\hline
+
+Function & Input values & Outcome & Justification \\[0pt]
+
+\hline
+\endhead
+\hline\multicolumn{4}{r}{Continued on next page} \\
+\endfoot
+\endlastfoot
+\hline
+fn a & 2 & pass & boundary test\\[0pt]
+\end{longtable}
+\end{document}

@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{(}\PYG{k}{setq}\PYG{+w}{ }\PYG{n+nv}{org\PYGZhy{}latex\PYGZhy{}listings}\PYG{+w}{ }\PYG{l+s+ss}{\PYGZsq{}minted}
+\PYG{+w}{      }\PYG{n+nv}{org\PYGZhy{}latex\PYGZhy{}packages\PYGZhy{}alist}\PYG{+w}{ }\PYG{o}{\PYGZsq{}}\PYG{p}{((}\PYG{l+s}{\PYGZdq{}\PYGZdq{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}minted\PYGZdq{}}\PYG{p}{))}
+\PYG{+w}{      }\PYG{n+nv}{org\PYGZhy{}latex\PYGZhy{}pdf\PYGZhy{}process}
+\PYG{+w}{      }\PYG{o}{\PYGZsq{}}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}pdflatex \PYGZhy{}shell\PYGZhy{}escape \PYGZhy{}interaction nonstopmode \PYGZhy{}output\PYGZhy{}directory \PYGZpc{}o \PYGZpc{}f\PYGZdq{}}
+\PYG{+w}{        }\PYG{l+s}{\PYGZdq{}pdflatex \PYGZhy{}shell\PYGZhy{}escape \PYGZhy{}interaction nonstopmode \PYGZhy{}output\PYGZhy{}directory \PYGZpc{}o \PYGZpc{}f\PYGZdq{}}\PYG{p}{))}
+\end{Verbatim}
