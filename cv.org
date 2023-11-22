@@ -1,0 +1,35 @@
+#+DATE:
+#+OPTIONS: toc:nil num:nil
+#+LaTeX_CLASS: article
+#+LaTeX_CLASS_OPTIONS: [8pt,a4paper]
+
+# Hide page number
+#+LaTeX_HEADER: \pagenumbering{gobble}
+
+# Setup packages to be used
+#+LaTeX_HEADER: \usepackage{array, xcolor, bibentry}
+#+LaTeX_HEADER: \usepackage[margin=2cm]{geometry}
+#+LaTeX_HEADER: \usepackage{titlesec}
+#+LaTeX_HEADER: \usepackage{titling}
+
+# Hyperlinks
+#+LATEX_HEADER: \definecolor{bblue}{HTML}{045ECE}
+#+LaTeX_HEADER: \usepackage{hyperref}
+#+LATEX_HEADER: \hypersetup{colorlinks, linkcolor=bblue, urlcolor=bblue}
+
+# Table aesthetics
+#+LaTeX_HEADER: \definecolor{lightgray}{gray}{0.8}
+#+LaTeX_HEADER: \newcolumntype{L}{>{\raggedleft}p{0.14\textwidth}}
+#+LaTeX_HEADER: \newcolumntype{R}{p{0.78\textwidth}}
+#+LaTeX_HEADER: \newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
+#+LaTeX_HEADER: \renewcommand{\hline}{}
+
+# Indentation
+#+LaTeX_HEADER: \setlength{\parindent}{0pt}
+
+# Subtitles
+#+latex_header: \titleformat{\section}{\bfseries}{}{0em}{}[\titlerule]
+#+LaTeX_HEADER: \titlespacing{\section}{0pt}{5pt}{5pt}
+
+# Header
+#+LaTeX_HEADER: \renewcommand{\maketitle}{\begin{center}{\LARGE\bfseries \theauthor} \vspace{5pt} \smallbreak \thetitle \end{center}}
