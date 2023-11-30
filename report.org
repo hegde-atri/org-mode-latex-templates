@@ -33,3 +33,6 @@
 
 # % Title in new page
 #+LATEX_HEADER: \AtBeginDocument{\maketitle\newpage}
+
+# Only first level of heading should have numbering
+#+OPTIONS: num:2
