@@ -17,10 +17,11 @@ If you are using these templates for real work, check out the sections under [[#
   - [[#example-file][Example file]]
   - [[#header-and-footer][Header and Footer]]
   - [[#tables][Tables]]
+  - [[#figures][Figures]]
   - [[#syntax-highlighting][Syntax highlighting]]
 - [[#other-resources][Other resources]]
 
-* [[./simple.org][simple.org]]
+* simple.org
 
 ** Example
 
@@ -38,7 +39,7 @@ If you are using these templates for real work, check out the sections under [[#
 Start here...
 #+end_src
 
-* [[./report.org][report.org]]
+* report.org
 
 To use it just add the setupfile line.
 Setupfile should point to wherever you're =report.org= is on your disk.
@@ -78,6 +79,29 @@ Adjust accordingly depending on how many columns you have.
 #+begin_src org
 ,#+ATTR_LATEX: :align c|c|c|c
 #+end_src
+
+** Figures
+
+When displaying figures you have control or its placement, size and orientation.
+
+
+#+begin_src org
+,#+ATTR_LATEX: :width 60px :placement [H] :options angle=90
+#+end_src
+
+Have a look at the different =placement= options below.
+
+*** Placement options
+
+| Specifier | Placement                                                                     |
+|-----------+-------------------------------------------------------------------------------|
+| [[kbd:][h]]         | Place float here. (/approximately at the same point it occurs in source text./) |
+| [[kbd:][t]]         | Top of the page.                                                              |
+| [[kbd:][b]]         | Bottom of the page.                                                           |
+| [[kbd:][p]]         | Special page for figures only                                                 |
+| [[kbd:][!]]         | Override internal parameters $\LaTeX$ uses for determining "good positions"   |
+| [[kbd:][H]]         | Places precisely at the lcataion in the $\LaTeX$ code. Requires the =float= package. |
+
 
 ** Syntax highlighting
 
