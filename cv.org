@@ -6,11 +6,18 @@
 # Hide page number
 #+LaTeX_HEADER: \pagenumbering{gobble}
 
+# Font
+#+LATEX_HEADER: \usepackage{lmodern}
+#+LATEX_HEADER: \renewcommand*\rmdefault{lmss}
+#+LATEX_HEADER: \usepackage{microtype}
+
 # Setup packages to be used
 #+LaTeX_HEADER: \usepackage{array, xcolor, bibentry}
 #+LaTeX_HEADER: \usepackage[margin=2cm]{geometry}
 #+LaTeX_HEADER: \usepackage{titlesec}
 #+LaTeX_HEADER: \usepackage{titling}
+
+#+LaTeX_HEADER: \usepackage{paralist}
 
 # Hyperlinks
 #+LATEX_HEADER: \definecolor{bblue}{HTML}{045ECE}
