@@ -35,8 +35,11 @@
 #+LaTeX_HEADER: \setlength{\parindent}{0pt}
 
 # Subtitles
-#+latex_header: \titleformat{\section}{\bfseries}{}{0em}{}[\titlerule]
+#+LaTeX_HEADER: \titleformat{\section}{\bfseries}{}{0em}{}[\titlerule]
 #+LaTeX_HEADER: \titlespacing{\section}{0pt}{5pt}{5pt}
+
+# Spacing
+#+LaTeX_HEADER: \titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
 
 # Header
 #+LaTeX_HEADER: \renewcommand{\maketitle}{\begin{center}{\LARGE\bfseries \theauthor} \vspace{5pt} \smallbreak \thetitle \end{center}}
