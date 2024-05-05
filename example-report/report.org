@@ -62,3 +62,10 @@ You can have different sort of tables
 | Function | Input values | Outcome | Justification |
 |----------+--------------+---------+---------------|
 | fn a     |            2 | pass    | boundary test |
+
+* COMMENT Local Variables
+  # Local Variables:
+  # eval: (server-start)
+  # eval: (add-hook 'after-save-hook 'org-latex-export-to-latex nil t)
+  # eval: (compile "latexmk -pdf -pvc")
+  # End:
