@@ -9,8 +9,14 @@ Here are some the SETUPFILEs I use when I am writing documents that I will impor
 If you are using these templates for real work, check out the sections under [[#reportorg][Report.org]] for more detail on writing in org-mode and exporting to latex.
 #+end_quote
 
+** Auto updating $\LaTeX$ pdf preview
+In the =example-report= folder, check the bottom commented header in the org file (at the very bottom), and the =.latexmkrc=.
+
+You will need these to setup auto compiling of the org \rightarrow tex \rightarrow pdf.
+
 * Table of Contents :TOC:
 - [[#preface][Preface]]
+  - [[#auto-updating-latex-pdf-preview][Auto updating $\LaTeX$ pdf preview]]
 - [[#simpleorg][simple.org]]
   - [[#example][Example]]
 - [[#reportorg][report.org]]
