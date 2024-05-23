@@ -25,6 +25,9 @@ You will need these to setup auto compiling of the org \rightarrow tex \rightarr
   - [[#tables][Tables]]
   - [[#figures][Figures]]
   - [[#syntax-highlighting][Syntax highlighting]]
+- [[#bibliography][Bibliography]]
+  - [[#citation-format][Citation Format]]
+- [[#footnotes][Footnotes]]
 - [[#other-resources][Other resources]]
 
 * simple.org
@@ -108,7 +111,6 @@ Have a look at the different =placement= options below.
 | [[kbd:][!]]         | Override internal parameters $\LaTeX$ uses for determining "good positions"   |
 | [[kbd:][H]]         | Places precisely at the lcataion in the $\LaTeX$ code. Requires the =float= package. |
 
-
 ** Syntax highlighting
 
 If you are including code blocks in your document and you want it to be pretty than add this to your emacs config.
@@ -125,6 +127,44 @@ If you are using Doom Emacs it will be in your =config.el=
         "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 #+end_src
 
+* Bibliography
+To add bibliography to your org file, create a =.bib= file. Let's name ours =bibliography.bib=.
+
+We'll now need to tell our org file about it.
+
+To the top of the file let's add a new property - =#+BIBLIOGRAPHY: bibliography.bib=.
+
+Imagine we had this entry in our bib file.
+
+#+begin_src bibtex
+@article{example_citation,
+  title={Literate Programming},
+  author={Donald E. Knuth},
+  journal={The Computer Journal},
+  volume={27},
+  number={2},
+  pages={97--111},
+  year={1984},
+  publisher={Oxford University Press}
+}
+#+end_src
+
+We can reference this either through this notation =[cite:@example_citation]=.
+
+Or an easier way to do it is through =org-cite-insert= or =SPC m @=.
+
+#+begin_quote
+A really use full resource for org citations - https://blog.tecosaur.com/tmio/2021-07-31-citations.html#cite-syntax
+#+end_quote
+
+** Citation Format
+You can mention page or page range by =[cite:@example_citation p. 5]= =[cite:@example_citation pp. 5-10]=
+
+There are a LOT of options like =chap.=, =para.=, =pp.=, =v.=, ... etc
+
+A good style and variant option is =[cite/t/cf:@example_citation]= in the format of =[cite/style/variant:@thing]=.
+
+* TODO Footnotes
 
 * Other resources
 - [[https:olmon.gitlab.io/org-themes][Org HTML Themes Collection]]
