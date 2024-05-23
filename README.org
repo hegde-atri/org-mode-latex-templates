@@ -164,7 +164,13 @@ There are a LOT of options like =chap.=, =para.=, =pp.=, =v.=, ... etc
 
 A good style and variant option is =[cite/t/cf:@example_citation]= in the format of =[cite/style/variant:@thing]=.
 
-* TODO Footnotes
+* Footnotes
+
+You can create footnotes with =SPC m f=. Create footnotes with citation for a clean look.
+
 
 * Other resources
 - [[https:olmon.gitlab.io/org-themes][Org HTML Themes Collection]]
+
+* TODOLIST
+- Setup RefTex? https://karthinks.com/software/reftex-in-org-mode/
