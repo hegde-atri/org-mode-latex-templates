@@ -29,6 +29,7 @@ You will need these to setup auto compiling of the org \rightarrow tex \rightarr
   - [[#citation-format][Citation Format]]
 - [[#footnotes][Footnotes]]
 - [[#other-resources][Other resources]]
+- [[#todolist][TODOLIST]]
 
 * simple.org
 
@@ -64,6 +65,13 @@ A real example file is in the works and coming soon...
 ,#+subtitle: Subtitle
 ,#+AUTHOR: Your name
 ,#+SETUPFILE: ~/.config/doom/latex-templates/report.org
+
+
+,#+LATEX_HEADER: \usepackage{titling}
+,#+LATEX_HEADER: \renewcommand{\maketitlehooka}{\vspace{-2em}}
+,#+LATEX_HEADER: \renewcommand{\maketitlehookb}{\begin{center}\large Optional Subtitle here \end{center}\vspace{-1em}}
+,#+LATEX_HEADER: \renewcommand{\maketitlehookd}{\newpage}
+,#+LATEX_HEADER: \AtBeginDocument{\thispagestyle{plain}}
 
 ,#+LATEX_HEADER: \fancyhead[C]{Title here}
 ,#+LATEX_HEADER: \fancyfoot[C]{\thepage}
