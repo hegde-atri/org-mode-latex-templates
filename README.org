@@ -25,6 +25,7 @@ You will need these to setup auto compiling of the org \rightarrow tex \rightarr
   - [[#tables][Tables]]
   - [[#figures][Figures]]
   - [[#syntax-highlighting][Syntax highlighting]]
+- [[#uos-report][UOS-REPORT]]
 - [[#bibliography][Bibliography]]
   - [[#citation-format][Citation Format]]
 - [[#footnotes][Footnotes]]
@@ -134,6 +135,10 @@ If you are using Doom Emacs it will be in your =config.el=
       '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
         "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 #+end_src
+
+* UOS-REPORT
+
+To use this check out - [[https://github.com/hegde-atri/uos-org-report][uos-org-report]].
 
 * Bibliography
 To add bibliography to your org file, create a =.bib= file. Let's name ours =bibliography.bib=.

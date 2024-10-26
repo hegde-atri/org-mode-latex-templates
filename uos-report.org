@@ -1,0 +1,40 @@
+#+LATEX_CLASS: report
+#+LATEX_CLASS_OPTIONS: [a4paper,11pt]
+#+LATEX_HEADER: \usepackage{etoolbox}
+#+LATEX_HEADER: \makeatletter
+#+LATEX-_EADER: \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+#+LATEX_HEADER: \makeatother
+
+# % Font
+#+LATEX_HEADER: \usepackage{lmodern}
+#+LATEX_HEADER: \renewcommand*\rmdefault{lmss}
+#+LATEX_HEADER: \usepackage{microtype}
+
+#+LATEX_HEADER: \usepackage[table]{xcolor}
+#+LATEX_HEADER: \usepackage[margin=0.9in,bmargin=1.0in,tmargin=1.0in]{geometry}
+#+LATEX_HEADER: \usepackage{amsmath}
+#+LATEX_HEADER: \usepackage{arydshln}
+#+LATEX_HEADER: \usepackage{subcaption}
+#+LaTeX_HEADER: \newcommand{\point}[1]{\noindent \textbf{#1}}
+
+#+LATEX_HEADER: \usepackage{setspace}
+#+LATEX_HEADER: \usepackage[toc,page]{appendix}
+#+LATEX_HEADER: \usepackage[none]{hyphenat} % turn hyphenation off by default
+
+# % Hyperlinks
+#+LATEX_HEADER: \definecolor{bblue}{HTML}{045ECE}
+#+LaTeX_HEADER: \usepackage{hyperref}
+#+LATEX_HEADER: \hypersetup{colorlinks, linkcolor=bblue, urlcolor=bblue}
+
+#+LaTeX_HEADER: \usepackage{csquotes}
+#+LATEX_HEADER: \usepackage{graphicx}
+#+LATEX_HEADER: \usepackage{bm}
+#+LaTeX_HEADER: \usepackage[mla]{ellipsis}
+#+LaTeX_HEADER: \parindent = 0em
+#+LaTeX_HEADER: \setlength\parskip{.5\baselineskip}
+#+LATEX_HEADER: \usepackage{adjustbox}
+
+# % Footer.
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhf{}
