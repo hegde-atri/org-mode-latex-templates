@@ -16,6 +16,7 @@
 #+LATEX_HEADER: \usepackage{arydshln}
 #+LATEX_HEADER: \usepackage{subcaption}
 #+LaTeX_HEADER: \newcommand{\point}[1]{\noindent \textbf{#1}}
+#+LATEX_HEADER: \usepackage{float}
 
 #+LATEX_HEADER: \usepackage{setspace}
 #+LATEX_HEADER: \usepackage[toc,page]{appendix}
