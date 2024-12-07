@@ -2,7 +2,6 @@
 #+LATEX_CLASS_OPTIONS: [a4paper,11pt]
 #+LATEX_HEADER: \usepackage{etoolbox}
 #+LATEX_HEADER: \makeatletter
-#+LATEX-_EADER: \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
 #+LATEX_HEADER: \makeatother
 
 # % Font
